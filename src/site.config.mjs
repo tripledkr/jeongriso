@@ -15,6 +15,8 @@ export default {
     { label: '칼럼', href: '/columns' },
   ],
   contact: {
+    formEndpoint: '', // 구글 Apps Script 웹 앱 주소 (입력하면 사이트 안 문의 폼이 표시됨)
+    privacyPeriod: '상담 종료 후 1년', // 개인정보 보유 기간
     tel: '010-3080-9136',
     email: 'tripled_kr@naver.com',
     formUrl: 'mailto:tripled_kr@naver.com?subject=%5B%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%A0%95%EB%A6%AC%EC%86%8C%5D%20%EC%95%84%EC%9E%84%EC%9B%B9%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%A0%9C%EC%9E%91%20%EC%83%81%EB%8B%B4', // 구글폼 등 문의폼 주소가 있으면 교체
