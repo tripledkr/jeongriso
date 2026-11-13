@@ -317,3 +317,22 @@ img{display:block;max-width:100%;height:auto}
   .hero--dark{padding:110px 0 96px}
   .hero--dark .hero__veil{background:linear-gradient(180deg,rgba(13,13,13,.88) 0%,rgba(13,13,13,.82) 55%,rgba(13,13,13,.92) 100%)}
 }
+
+/* ===== 자간 완화 ===== */
+body{letter-spacing:.006em}
+.h1{letter-spacing:-.018em}
+.h2,.article__title{letter-spacing:-.014em}
+.h3,.card h3,.post__title,.steps h3,.contact__item strong,.hero__points strong,.faq summary{letter-spacing:-.008em}
+.statbar strong{letter-spacing:-.02em}
+.hd__logo,.ft__logo{letter-spacing:.01em}
+.label,.hero__kw,.post__cat,.ba__tag,.steps b{letter-spacing:.17em}
+.lead,.prose,.card p,.post__desc,.compare{letter-spacing:.004em}
+.btn,.td-more{letter-spacing:.002em}
+
+/* 한글 제목 + 영문 부제 */
+.head__en{display:block;margin-top:14px;font-size:clamp(14px,1.2vw,17px);font-weight:500;font-style:italic;letter-spacing:.01em;color:#8A8A8A}
+.sec--dark .head__en{color:rgba(255,255,255,.45)}
+
+/* 번호를 크게 */
+.card__no{font-size:28px;font-weight:800;letter-spacing:-.02em;color:#C9D6D0;margin-bottom:28px}
+.card:hover .card__no{color:var(--accent);transition:color .3s}
