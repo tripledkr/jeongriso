@@ -305,3 +305,15 @@ img{display:block;max-width:100%;height:auto}
 .faq summary{font-weight:700}
 .label,.hero__kw,.post__cat,.ba__tag,.steps b{font-weight:800}
 .btn{font-weight:800}
+
+/* 사진 히어로 보정 */
+.hero--dark{padding:150px 0 130px}
+.hero--dark .hero__bg{background-position:center right}
+.hero--dark .hero__veil{background:linear-gradient(100deg,rgba(13,13,13,.9) 0%,rgba(13,13,13,.78) 40%,rgba(13,13,13,.42) 68%,rgba(13,13,13,.18) 100%)}
+.hero--dark .hero__kw{background:rgba(255,255,255,.14);color:#fff}
+.hero--dark .btn:not(.btn--line){background:#17A06F;color:#fff}
+.hero--dark .btn:not(.btn--line):hover{background:#148C60}
+@media (max-width:860px){
+  .hero--dark{padding:110px 0 96px}
+  .hero--dark .hero__veil{background:linear-gradient(180deg,rgba(13,13,13,.88) 0%,rgba(13,13,13,.82) 55%,rgba(13,13,13,.92) 100%)}
+}
