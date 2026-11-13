@@ -1,7 +1,7 @@
 /* 사이트 기본 정보 : 배포 전 [ ] 항목을 실제 값으로 교체 */
 export default {
   name: '홈페이지 정리소',
-  url: 'https://homepage-jeongriso.kr', // 실제 도메인으로 교체
+  url: 'https://jeongriso-two.vercel.app', // 실제 도메인으로 교체
   keyword: '아임웹 홈페이지 제작',
   theme: {
     accent: '#0F7A5A',
