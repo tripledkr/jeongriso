@@ -254,7 +254,7 @@ img{display:block;max-width:100%;height:auto}
 .statbar li{display:flex;flex-direction:column;gap:8px}
 .statbar strong{font-size:clamp(34px,4vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1}
 .statbar strong small{font-size:20px;font-weight:700;margin-left:4px}
-.statbar span{font-size:15px;color:#666}
+.statbar li>span{font-size:15px;color:#666}
 @media (max-width:640px){.statbar__in{grid-template-columns:1fr;gap:28px;padding:36px 0}.statbar strong{font-size:34px}}
 
 /* 히어로 가독성 보정 */
