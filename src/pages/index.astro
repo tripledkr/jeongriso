@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Faq from '../components/Faq.astro';
 import Contact from '../components/Contact.astro';
 import LatestColumns from '../components/LatestColumns.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
 import site from '../site.config.mjs';
 
 const faqs = [
@@ -35,16 +36,18 @@ const schema = [
   schema={schema}
 >
   <!-- 히어로 -->
-  <section class="hero">
+  <section class="hero hero--light">
+    <div class="hero__bg" style="background-image:url('/hero.webp')" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
     <div class="inner">
-      <p class="hero__kw">아임웹 홈페이지 제작</p>
-      <h1 class="h1">아임웹으로 만들고,<br>회사에서 직접 고치는 홈페이지.</h1>
-      <p class="lead">아임웹 홈페이지 제작부터 운영 교육까지 한 번에. 오픈 후에는 담당자가 문구와 이미지를 직접 수정할 수 있게 구조부터 정리해서 만들어 드립니다.</p>
-      <div class="hero__btns">
+      <p class="hero__kw" data-reveal>아임웹 홈페이지 제작</p>
+      <h1 class="h1" data-reveal>아임웹으로 만들고,<br>회사에서 직접 고치는 홈페이지.</h1>
+      <p class="lead" data-reveal>아임웹 홈페이지 제작부터 운영 교육까지 한 번에. 오픈 후에는 담당자가 문구와 이미지를 직접 수정할 수 있게 구조부터 정리해서 만들어 드립니다.</p>
+      <div class="hero__btns" data-reveal>
         <a class="btn" href="#contact">무료 제작 상담 →</a>
         <a class="btn btn--line" href="#fit">우리 회사에 맞을까?</a>
       </div>
-      <ul class="hero__points">
+      <ul class="hero__points" data-reveal-group>
         <li><strong>아임웹 전문 제작</strong><span>템플릿 느낌 없는 맞춤 디자인</span></li>
         <li><strong>직접 수정 교육</strong><span>오픈할 때 1:1 사용법 안내</span></li>
         <li><strong>회사 명의 운영</strong><span>계정과 운영 권한은 회사에</span></li>
@@ -52,14 +55,25 @@ const schema = [
     </div>
   </section>
 
+
+  <!-- 수치 -->
+  <section class="statbar" aria-label="주요 수치">
+    <div class="inner">
+      <ul class="statbar__in" data-reveal-group>
+        <li><strong><span class="num" data-count="60">0</span><small>+</small></strong><span>운영 관리 중인 사이트</span></li>
+        <li><strong><span class="num" data-count="6">0</span><small>주</small></strong><span>상담부터 오픈까지</span></li>
+        <li><strong><span class="num" data-count="2">0</span><small>개월</small></strong><span>오픈 후 무상 케어</span></li>
+      </ul>
+    </div>
+  </section>
   <!-- 잘 맞는 회사 -->
   <section class="sec sec--soft" id="fit" aria-labelledby="fit-title">
     <div class="inner">
-      <div class="head">
+      <div class="head" data-reveal>
         <p class="label">CHECK</p>
         <h2 id="fit-title" class="h2">이런 회사라면,<br>아임웹 홈페이지가 잘 맞습니다.</h2>
       </div>
-      <ul class="checks">
+      <ul class="checks" data-reveal-group>
         <li>개발자 없이 담당자가 직접 내용을 고치고 싶다</li>
         <li>서버나 보안 관리는 신경 쓰고 싶지 않다</li>
         <li>게시판, 문의폼, 예약 같은 기본 기능이 필요하다</li>
@@ -71,14 +85,20 @@ const schema = [
   </section>
 
   <!-- 혼자 만들 때 막히는 부분 -->
-  <section class="sec" aria-labelledby="stuck-title">
+  <section class="sec" id="scope" aria-labelledby="stuck-title">
     <div class="inner">
-      <div class="head">
+      <div class="head" data-reveal>
         <p class="label">WHY US</p>
         <h2 id="stuck-title" class="h2">아임웹, 혼자 만들면<br>여기서 막힙니다.</h2>
         <p class="lead">아임웹은 쉬운 도구지만, 회사 홈페이지다운 완성도를 내는 건 또 다른 일입니다.</p>
       </div>
-      <ul class="cards">
+      <BeforeAfter
+        beforeLabel="혼자 만들 때"
+        afterLabel="맡길 때"
+        beforeCaption="템플릿 메뉴를 그대로 쓰다 보니 내용이 쌓이기만 하고, 무엇을 보여줄지 정리되지 않습니다."
+        afterCaption="메뉴와 페이지를 회사에 맞게 다시 나누고, 문의까지 이어지는 흐름을 만듭니다."
+      />
+      <ul class="cards" data-reveal-group>
         <li class="card"><span class="card__no">01</span><h3>템플릿 느낌이 난다</h3><p>여백과 글자 크기, 배치를 회사에 맞게 다시 설계해 템플릿과 다른 완성도를 만듭니다.</p></li>
         <li class="card"><span class="card__no">02</span><h3>메뉴를 어떻게 나눌지 모르겠다</h3><p>방문자가 찾는 순서대로 메뉴와 페이지 구조를 먼저 정리합니다.</p></li>
         <li class="card"><span class="card__no">03</span><h3>모바일에서 어색하다</h3><p>PC와 모바일 화면을 따로 확인하며 글자와 배치를 맞춥니다.</p></li>
@@ -92,11 +112,11 @@ const schema = [
   <!-- 비교 -->
   <section class="sec sec--soft" aria-labelledby="compare-title">
     <div class="inner">
-      <div class="head">
+      <div class="head" data-reveal>
         <p class="label">COMPARE</p>
         <h2 id="compare-title" class="h2">혼자 만들 때와 맡길 때,<br>이렇게 다릅니다.</h2>
       </div>
-      <div class="table-wrap">
+      <div class="table-wrap" data-reveal>
         <table class="compare">
           <caption class="skip">아임웹 홈페이지를 혼자 만들 때와 맡길 때 비교</caption>
           <thead><tr><th scope="col">항목</th><th scope="col">혼자 만들 때</th><th scope="col">홈페이지 정리소</th></tr></thead>
@@ -115,7 +135,7 @@ const schema = [
   <!-- 진행 과정 -->
   <section class="sec sec--dark" id="process" aria-labelledby="process-title">
     <div class="inner">
-      <div class="head">
+      <div class="head" data-reveal>
         <p class="label">PROCESS</p>
         <h2 id="process-title" class="h2">아임웹 홈페이지 제작,<br>이렇게 진행됩니다.</h2>
       </div>
@@ -134,7 +154,7 @@ const schema = [
   <!-- FAQ -->
   <section class="sec sec--soft" id="faq" aria-labelledby="faq-title">
     <div class="inner inner--narrow">
-      <div class="head">
+      <div class="head" data-reveal>
         <p class="label">FAQ</p>
         <h2 id="faq-title" class="h2">아임웹 홈페이지 제작<br>자주 묻는 질문</h2>
       </div>

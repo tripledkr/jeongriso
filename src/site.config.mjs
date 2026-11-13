@@ -9,9 +9,9 @@ export default {
     bg: '#FCFBF8',
   },
   nav: [
-    { label: '이런 회사에', href: '/#fit' },
+    { label: '이럴 때 좋아요', href: '/#fit' },
+    { label: '맡기면 다른 점', href: '/#scope' },
     { label: '진행 과정', href: '/#process' },
-    { label: '자주 묻는 질문', href: '/#faq' },
     { label: '칼럼', href: '/columns' },
   ],
   contact: {
