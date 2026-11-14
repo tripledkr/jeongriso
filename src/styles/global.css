@@ -890,3 +890,4 @@ body{color:var(--ink);letter-spacing:-.02em;line-height:1.6}
   .wipe__bar{left:50%}
   .wipe__cap--a,.wipe__tag--a{opacity:1}
 }
+.wipe__stage{aspect-ratio:2640/1776}
