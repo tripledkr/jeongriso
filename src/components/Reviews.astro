@@ -20,16 +20,18 @@ const [lead, ...rest] = items;
 
       <div class="rv2__grid">
         <figure class="rv2__lead" data-reveal>
+          <p class="rv2__stars" aria-label="별점 5점 만점에 5점"><span aria-hidden="true">★★★★★</span></p>
           <blockquote>{lead.text}</blockquote>
-          <figcaption><b>{lead.company}</b><span>{lead.name}</span></figcaption>
+          <figcaption><b>{lead.name} 님</b><span>{lead.company}</span></figcaption>
         </figure>
 
         <ul class="rv2__list" data-reveal-group>
           {rest.slice(0, 4).map((r) => (
             <li>
               <figure>
+                <p class="rv2__stars rv2__stars--sm" aria-label="별점 5점 만점에 5점"><span aria-hidden="true">★★★★★</span></p>
                 <blockquote>{r.text}</blockquote>
-                <figcaption><b>{r.company}</b><span>{r.name}</span></figcaption>
+                <figcaption><b>{r.name} 님</b><span>{r.company}</span></figcaption>
               </figure>
             </li>
           ))}

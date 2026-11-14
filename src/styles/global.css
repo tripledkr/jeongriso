@@ -784,3 +784,10 @@ h1,h2,h3,h4,.h1,.h2,.h3{word-break:keep-all;text-wrap:balance}
   .rv2__lead{padding:28px 26px 26px}
 }
 .rv__src{display:inline-block;margin-top:12px;font-size:13.5px;letter-spacing:.01em;color:#9A9A95}
+
+/* ===== 후기: 별점 표기 ===== */
+.rv2__stars{margin:0 0 4px;font-size:16px;letter-spacing:.14em;color:#E0A32E;line-height:1}
+.rv2__lead .rv2__stars{position:relative;z-index:1;padding-top:26px}
+.rv2__lead blockquote{padding-top:16px}
+.rv2__stars--sm{font-size:13px;margin-bottom:10px}
+.rv2__list figcaption b,.rv2__lead figcaption b{font-weight:700}
