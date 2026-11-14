@@ -11,6 +11,7 @@ const faqs = [
   { q: '아임웹 이용료는 제작비와 별도인가요?', a: '네, 아임웹 요금제와 도메인 비용은 사이트를 운영하는 회사 명의로 결제하는 별도 비용입니다. 필요한 요금제와 항목은 상담할 때 미리 안내합니다.' },
   { q: '오픈 후에 직접 수정할 수 있나요?', a: '아임웹 관리자에서 문구, 이미지, 게시글을 직접 수정할 수 있도록 구조를 잡고, 오픈할 때 1:1로 사용법을 안내합니다.' },
   { q: '이미 아임웹으로 만든 홈페이지도 정리해 주나요?', a: '가능합니다. 지금 사이트의 구조와 디자인을 검토해서 메뉴 정리, 모바일 화면, 디자인 개선을 진행합니다.' },
+  { q: 'AI로 홈페이지를 만드는 것과 뭐가 다른가요?', a: 'AI 홈페이지 빌더는 빠르고 저렴합니다. 다만 회사의 실적이나 인증 같은 자료는 반영되지 않아 어느 회사에나 쓸 수 있는 문장이 남고, 문의로 이어지는 동선과 게시판·알림·검색엔진 등록 같은 운영 세팅은 따로 해야 합니다. 한 장짜리 소개 페이지라면 AI 쪽이 맞고, 회사 이름으로 몇 년을 쓸 홈페이지라면 구조부터 설계하는 편이 낫습니다.' },
   { q: '아임웹 템플릿 느낌이 나지 않게 만들 수 있나요?', a: '레이아웃과 여백, 글자 크기를 회사에 맞게 다시 설계하고, 필요한 부분은 커스텀 코드로 다듬어 기본 템플릿과 다른 완성도로 만듭니다.' },
   { q: '사이트 계정과 소유권은 누구에게 있나요?', a: '아임웹 사이트와 도메인은 회사 계정으로 만들어 운영 권한이 회사에 남도록 진행합니다.' },
 ];
@@ -40,15 +41,15 @@ const schema = [
     <div class="hero__bg" style="background-image:url('/hero.webp')" aria-hidden="true"></div>
     <div class="hero__veil" aria-hidden="true"></div>
     <div class="inner">
-      <p class="hero__kw" data-reveal>아임웹 홈페이지 제작</p>
-      <h1 class="h1" data-reveal>아임웹으로 만들고,<br>회사에서 직접 고치는 홈페이지.</h1>
-      <p class="lead" data-reveal>아임웹 홈페이지 제작부터 운영 교육까지 한 번에. 오픈 후에는 담당자가 문구와 이미지를 직접 수정할 수 있게 구조부터 정리해서 만들어 드립니다.</p>
+      <p class="hero__kw" data-reveal>회사 홈페이지 제작</p>
+      <h1 class="h1" data-reveal>만들어만 주고 끝나는<br>홈페이지는 만들지 않습니다.</h1>
+      <p class="lead" data-reveal>기획과 디자인, 제작까지 맡기고 오픈 후에는 담당자가 직접 운영합니다. 문구 하나 바꾸려고 제작 업체에 연락하지 않아도 되도록, 구조부터 정리해서 만들어 드립니다.</p>
       <div class="hero__btns" data-reveal>
         <a class="btn" href="#contact">무료 제작 상담 →</a>
         <a class="btn btn--line" href="#fit">우리 회사에 맞을까?</a>
       </div>
       <ul class="hero__points" data-reveal-group>
-        <li><strong>아임웹 전문 제작</strong><span>템플릿 느낌 없는 맞춤 디자인</span></li>
+        <li><strong>맞춤 설계</strong><span>템플릿 느낌 없는 구조와 디자인</span></li>
         <li><strong>직접 수정 교육</strong><span>오픈할 때 1:1 사용법 안내</span></li>
         <li><strong>회사 명의 운영</strong><span>계정과 운영 권한은 회사에</span></li>
       </ul>
@@ -139,26 +140,70 @@ const schema = [
   </section>
 
   <!-- 비교 -->
-  <section class="sec sec--soft" aria-labelledby="compare-title">
+  <!-- AI 홈페이지와의 차이 -->
+  <section class="sec sec--soft" id="vs-ai" aria-labelledby="ai-title">
     <div class="inner">
-      <div class="head" data-reveal>
-        <p class="label">COMPARE</p>
-        <h2 id="compare-title" class="h2">혼자 만들 때와 맡길 때,<br>이렇게 다릅니다.</h2>
-        <span class="head__en">DIY or with us</span>
+      <div class="head head--split" data-reveal>
+        <div>
+          <p class="label">AI VS US</p>
+          <h2 id="ai-title" class="h2">AI로 만든 홈페이지와<br>무엇이 다른가요?</h2>
+          <span class="head__en">What AI builders miss</span>
+        </div>
+        <p class="lead">먼저 솔직하게 말씀드리면, AI 홈페이지 빌더는 빠르고 저렴합니다. 몇 분이면 한 페이지가 나옵니다. 다만 회사 홈페이지로 몇 년을 쓰기에는 비어 있는 자리가 있습니다.</p>
       </div>
-      <div class="table-wrap" data-reveal>
-        <table class="compare">
-          <caption class="skip">아임웹 홈페이지를 혼자 만들 때와 맡길 때 비교</caption>
-          <thead><tr><th scope="col">항목</th><th scope="col">혼자 만들 때</th><th scope="col">홈페이지 정리소</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">구조</th><td>템플릿 메뉴를 그대로 사용</td><td class="is-good">회사에 맞게 메뉴와 페이지 재설계</td></tr>
-            <tr><th scope="row">디자인</th><td>템플릿 기본 디자인</td><td class="is-good">맞춤 레이아웃 + 커스텀 코드 보완</td></tr>
-            <tr><th scope="row">문구</th><td>직접 작성</td><td class="is-good">자료를 바탕으로 카피 정리</td></tr>
-            <tr><th scope="row">검색 설정</th><td>놓치기 쉬움</td><td class="is-good">페이지별 제목 · 설명 · 검색엔진 등록</td></tr>
-            <tr><th scope="row">오픈 후</th><td>혼자 찾아가며 운영</td><td class="is-good">1:1 운영 교육 후 직접 수정</td></tr>
-          </tbody>
-        </table>
+
+      <div class="vs" data-reveal>
+        <div class="vs__col vs__col--a">
+          <p class="vs__h">AI 홈페이지 빌더</p>
+          <ol class="vs__list">
+            <li><b>결과물이 서로 닮습니다</b><span>학습한 패턴 안에서 만들어지다 보니 업종이 달라도 구조와 문장이 비슷해집니다. 경쟁사와 같은 인상을 주게 됩니다.</span></li>
+            <li><b>회사 자료가 들어가지 않습니다</b><span>준공 실적, 인증, 공정, 거래처처럼 회사를 설명하는 자료는 AI가 알지 못합니다. 결국 어느 회사에나 쓸 수 있는 문장이 남습니다.</span></li>
+            <li><b>문의까지 가는 길이 없습니다</b><span>페이지는 만들어지지만, 방문자가 서비스를 읽고 상담으로 이어지는 동선은 따로 설계해야 하는 영역입니다.</span></li>
+            <li><b>오픈 다음이 비어 있습니다</b><span>게시판, 문의 알림, 검색엔진 등록, 수정 방법. 실제로 운영하려면 필요한 것들은 사람이 세팅해야 합니다.</span></li>
+          </ol>
+        </div>
+        <div class="vs__col vs__col--b">
+          <p class="vs__h vs__h--on">홈페이지 정리소</p>
+          <ol class="vs__list">
+            <li><b>회사 자료를 먼저 읽습니다</b><span>가지고 계신 회사소개서, 사진, 실적 자료를 받아 무엇을 앞에 둘지부터 정합니다.</span></li>
+            <li><b>업종과 규모에 맞게 설계합니다</b><span>방문자가 궁금해하는 순서대로 메뉴와 페이지를 나눕니다. 같은 템플릿을 두 번 쓰지 않습니다.</span></li>
+            <li><b>서비스를 읽은 자리에 버튼을 둡니다</b><span>문의로 이어지는 지점을 정해서 배치하고, 폼으로 들어온 내용이 담당자에게 바로 전달되게 연결합니다.</span></li>
+            <li><b>오픈 후를 함께 준비합니다</b><span>검색엔진 등록까지 마치고, 관리자에서 무엇을 어떻게 고치는지 1:1로 안내합니다.</span></li>
+          </ol>
+        </div>
       </div>
+
+      <p class="vs__note">AI 빌더가 나쁜 도구라는 뜻은 아닙니다. 한 장짜리 소개 페이지가 빨리 필요하다면 그쪽이 더 맞습니다. 회사 이름으로 몇 년을 쓸 홈페이지라면 이야기가 달라집니다.</p>
+    </div>
+  </section>
+
+  <!-- 사진 띠 -->
+  <section class="band band--photo sec--lift" aria-label="핵심 메시지">
+    <div class="band__bg" aria-hidden="true"></div>
+    <div class="inner">
+      <p>홈페이지는 만드는 날보다<br><em>고치는 날</em>이 훨씬 많습니다.</p>
+      <span>Built to be maintained, not just launched.</span>
+    </div>
+  </section>
+
+  <!-- 왜 아임웹인가 -->
+  <section class="sec" id="builder" aria-labelledby="builder-title">
+    <div class="inner">
+      <div class="head head--split" data-reveal>
+        <div>
+          <p class="label">WHY IMWEB</p>
+          <h2 id="builder-title" class="h2">왜 아임웹으로<br>만드나요?</h2>
+          <span class="head__en">Our platform of choice</span>
+        </div>
+        <p class="lead">홈페이지 정리소는 대부분의 회사 홈페이지를 아임웹으로 제작합니다. 디자인이나 기획을 아임웹에 맞추는 게 아니라, 오픈 다음에 회사가 직접 운영할 수 있다는 이유 때문입니다.</p>
+      </div>
+      <ol class="grid6 grid6--4">
+        <li data-reveal><span class="grid6__n">01</span><h3 class="grid6__t">담당자가 직접 고칩니다</h3><p class="grid6__d">관리자 화면에서 문구와 이미지, 게시글을 바로 수정합니다. 코드를 몰라도 되고, 제작 업체에 연락하지 않아도 됩니다.</p></li>
+        <li data-reveal><span class="grid6__n">02</span><h3 class="grid6__t">서버와 보안을 신경 쓰지 않습니다</h3><p class="grid6__d">호스팅, 백업, 보안 인증서가 요금제에 포함됩니다. 사이트가 멈추거나 인증서가 만료되는 일을 회사가 관리하지 않아도 됩니다.</p></li>
+        <li data-reveal><span class="grid6__n">03</span><h3 class="grid6__t">필요한 기능이 이미 있습니다</h3><p class="grid6__d">게시판, 문의폼, 예약, 회원, 결제가 기본으로 제공됩니다. 나중에 상품 판매를 붙일 때도 사이트를 새로 만들지 않습니다.</p></li>
+        <li data-reveal><span class="grid6__n">04</span><h3 class="grid6__t">비용이 예측됩니다</h3><p class="grid6__d">월 요금제와 도메인 비용이 정해져 있어 운영비를 미리 계산할 수 있습니다. 사이트와 도메인은 회사 명의로 만듭니다.</p></li>
+      </ol>
+      <p class="vs__note">다만 아임웹이 모든 경우에 맞지는 않습니다. 복잡한 연동이나 자체 시스템이 필요하다면 별도 개발이 맞고, 상담할 때 그렇게 말씀드립니다.</p>
     </div>
   </section>
 

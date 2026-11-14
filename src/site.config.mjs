@@ -11,6 +11,7 @@ export default {
   nav: [
     { label: '이럴 때 좋아요', href: '/#fit' },
     { label: '맡기면 다른 점', href: '/#scope' },
+    { label: 'AI와 비교', href: '/#vs-ai' },
     { label: '진행 과정', href: '/#process' },
     { label: '칼럼', href: '/columns' },
   ],
