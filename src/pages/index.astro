@@ -77,14 +77,61 @@ const schema = [
         <span class="head__en">Is it a good fit?</span>
         <p class="split__note">모든 회사에 맞는 방식은 아닙니다.<br class="br-pc">아래 항목에 공감되는 게 많을수록 잘 맞습니다.</p>
       </div>
-      <ol class="signs" data-reveal-group>
-        <li><span class="signs__n">01</span><p>개발자 없이 담당자가 직접 내용을 고치고 싶다</p></li>
-        <li><span class="signs__n">02</span><p>서버나 보안 관리는 신경 쓰고 싶지 않다</p></li>
-        <li><span class="signs__n">03</span><p>게시판, 문의폼, 예약 같은 기본 기능이 필요하다</p></li>
-        <li><span class="signs__n">04</span><p>나중에 상품 판매까지 붙일 수도 있다</p></li>
-        <li><span class="signs__n">05</span><p>너무 오래 걸리지 않게 오픈하고 싶다</p></li>
-        <li><span class="signs__n">06</span><p>운영 비용을 예측할 수 있었으면 좋겠다</p></li>
+      <ol class="signs" data-signs data-reveal-group>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">01</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">개발자 없이 담당자가 직접 내용을 고치고 싶다</span>
+          </label>
+        </li>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">02</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">서버나 보안 관리는 신경 쓰고 싶지 않다</span>
+          </label>
+        </li>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">03</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">게시판, 문의폼, 예약 같은 기본 기능이 필요하다</span>
+          </label>
+        </li>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">04</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">나중에 상품 판매까지 붙일 수도 있다</span>
+          </label>
+        </li>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">05</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">너무 오래 걸리지 않게 오픈하고 싶다</span>
+          </label>
+        </li>
+        <li>
+          <label class="signs__row">
+            <input type="checkbox" class="signs__cb">
+            <span class="signs__n">06</span>
+            <span class="signs__box" aria-hidden="true"></span>
+            <span class="signs__t">운영 비용을 예측할 수 있었으면 좋겠다</span>
+          </label>
+        </li>
       </ol>
+      <div class="signs__result" data-signs-result aria-live="polite">
+        <p class="signs__count"><b>0</b><span>개 선택</span></p>
+        <p class="signs__msg">해당하는 항목을 눌러 보세요.</p>
+        <a class="btn signs__cta" href="#contact">무료 제작 상담 →</a>
+      </div>
     </div>
   </section>
 

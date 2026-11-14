@@ -116,3 +116,38 @@
   window.addEventListener('resize', paint);
   paint();
 })();
+
+/* ===== 적합도 체크리스트: 선택 개수에 따른 안내 ===== */
+(function () {
+  var list = document.querySelector('[data-signs]');
+  var panel = document.querySelector('[data-signs-result]');
+  if (!list || !panel) return;
+
+  var countEl = panel.querySelector('.signs__count b');
+  var msgEl = panel.querySelector('.signs__msg');
+  var boxes = [].slice.call(list.querySelectorAll('.signs__cb'));
+
+  var MESSAGES = [
+    { max: 0, alert: false, text: '해당하는 항목을 눌러 보세요.' },
+    { max: 1, alert: false, text: '한 가지만 해당한다면 다른 방식이 더 맞을 수도 있습니다. 상담에서 솔직하게 말씀드릴게요.' },
+    { max: 3, alert: true,  text: '잘 맞는 편입니다. 필요한 기능과 일정만 정리하면 바로 시작할 수 있습니다.' },
+    { max: 5, alert: true,  text: '잘 맞습니다. 담당자가 직접 운영하는 구조로 만들면 효과가 큰 경우예요.' },
+    { max: 6, alert: true,  text: '여섯 가지 모두 해당합니다. 저희가 가장 잘하는 형태의 홈페이지입니다.' },
+  ];
+
+  function update() {
+    var n = 0;
+    for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) n++;
+    countEl.textContent = String(n);
+    for (var k = 0; k < MESSAGES.length; k++) {
+      if (n <= MESSAGES[k].max) {
+        msgEl.textContent = MESSAGES[k].text;
+        panel.classList.toggle('is-alert', MESSAGES[k].alert);
+        break;
+      }
+    }
+  }
+
+  boxes.forEach(function (b) { b.addEventListener('change', update); });
+  update();
+})();
