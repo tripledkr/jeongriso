@@ -559,3 +559,9 @@ body{letter-spacing:-.008em}
 }
 .article__cover{aspect-ratio:2.45/1}
 .article__cover img{height:100%;object-fit:cover}
+
+/* ===== 정리소 수치 띠: 중앙 정렬 ===== */
+.statbar__in{text-align:center}
+.statbar li{padding:36px 16px 0 !important;align-items:center}
+.statbar strong{justify-content:center}
+@media (max-width:640px){ .statbar li{padding:28px 0 !important} }
