@@ -1,0 +1,40 @@
+---
+/* 고객 후기 — 대표 후기 하나를 크게, 나머지는 헤어라인 목록으로.
+   src/data/reviews.mjs 의 reviews 배열이 비어 있으면 섹션 자체가 렌더되지 않습니다. */
+import { reviews, placeholder } from '../data/reviews.mjs';
+
+const PREVIEW = import.meta.env.REVIEW_PREVIEW === 'true';
+const items = reviews.length > 0 ? reviews : (PREVIEW ? placeholder : []);
+const [lead, ...rest] = items;
+---
+{items.length >= 3 && (
+  <section class="sec rv2" id="reviews" aria-labelledby="rv2-title">
+    <div class="inner">
+      <div class="head head--split" data-reveal>
+        <div>
+          <p class="label">REVIEW</p>
+          <h2 id="rv2-title" class="h2">맡기고 나서<br>달라진 점.</h2>
+        </div>
+        <p class="lead">오픈 이후 직접 운영하시면서 보내주신 이야기입니다.</p>
+      </div>
+
+      <div class="rv2__grid">
+        <figure class="rv2__lead" data-reveal>
+          <blockquote>{lead.text}</blockquote>
+          <figcaption><b>{lead.company}</b><span>{lead.name}</span></figcaption>
+        </figure>
+
+        <ul class="rv2__list" data-reveal-group>
+          {rest.slice(0, 4).map((r) => (
+            <li>
+              <figure>
+                <blockquote>{r.text}</blockquote>
+                <figcaption><b>{r.company}</b><span>{r.name}</span></figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+)}

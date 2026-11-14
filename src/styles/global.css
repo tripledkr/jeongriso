@@ -757,3 +757,29 @@ h1,h2,h3,h4,.h1,.h2,.h3{word-break:keep-all;text-wrap:balance}
 }
 /* 이전 가로 바 스타일 잔재 제거 */
 .steps li::after,.steps.is-in li::after{width:9px;height:9px;background:none;transition:none}
+
+/* ===== 고객 후기: 대표 인용 + 목록 ===== */
+.rv2__grid{margin-top:66px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(40px,5vw,86px);align-items:start}
+.rv2__lead{margin:0;padding:38px 38px 34px;background:#EDF4F0;border-radius:16px;position:relative}
+.rv2__lead::before{content:'“';position:absolute;top:10px;left:26px;
+  font-size:76px;line-height:1;color:var(--accent);opacity:.26}
+.rv2__lead blockquote{margin:0;padding-top:28px;font-size:clamp(19px,1.9vw,24px);line-height:1.62;
+  letter-spacing:-.018em;font-weight:500;color:#15201B}
+.rv2__lead figcaption{margin-top:26px;padding-top:20px;border-top:1px solid #D6DED8;
+  display:flex;align-items:baseline;gap:10px}
+.rv2__lead figcaption b{font-size:15.5px;font-weight:700;color:#15201B}
+.rv2__lead figcaption span{font-size:13.5px;color:#7E8880}
+.rv2__list{list-style:none;margin:0;padding:0;border-top:1px solid #15201B}
+.rv2__list li{border-bottom:1px solid #E4E1D8;padding:26px 0;
+  transition:padding-left .3s cubic-bezier(.22,.8,.3,1)}
+.rv2__list li:hover{padding-left:12px}
+.rv2__list figure{margin:0}
+.rv2__list blockquote{margin:0;font-size:16px;line-height:1.78;letter-spacing:-.008em;color:#4F594F}
+.rv2__list figcaption{margin-top:12px;display:flex;align-items:baseline;gap:9px}
+.rv2__list figcaption b{font-size:14px;font-weight:700;color:#15201B}
+.rv2__list figcaption span{font-size:13px;color:#8B877C}
+@media (max-width:900px){
+  .rv2__grid{grid-template-columns:1fr;gap:38px;margin-top:46px}
+  .rv2__lead{padding:28px 26px 26px}
+}
